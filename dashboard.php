@@ -116,84 +116,117 @@ $db->close();
             </div>
         </div>
 
+
         <div class="form-container">
-            <h1>Personal Information</h1>
+            <div class="form-header">
+                <h1>Personal Information</h1>
+                <svg class="arrow-header-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="m17.16 7.59l-5.66 5.66l-5.66-5.66l.71-.7l4.95 4.95l4.95-4.95zm0 4l-5.66 5.66l-5.66-5.66l.71-.7l4.95 4.95l4.95-4.95z" />
+                </svg>
+            </div>
             <form action="#" method="post" enctype="multipart/form-data">
-                <div class="personal-info-container">
-                    <div class="input-row">
-                        <div>
-                            <label for="fName">First Name</label>
-                            <input type="text" id="fName" name="fName" placeholder="First Name" class="input-text" required disabled>
-                        </div>
-                        <div>
-                            <label for="mName">Middle Name</label>
-                            <input type="text" id="mName" name="mName" placeholder="Middle Name" class="input-text" required disabled>
-                        </div>
-                        <div>
-                            <label for="surname">Surname</label>
-                            <input type="text" id="surname" name="surname" placeholder="Surname" class="input-text" required disabled>
-                        </div>
-                        <div>
-                            <label for="suffix">Suffix</label>
-                            <select id="suffix" name="suffix" class="input-text" disabled>
-                                <option value="" disabled selected>Select suffix</option>
-                                <option value="None">None</option>
-                                <option value="Jr.">Jr.</option>
-                                <option value="Sr.">Sr.</option>
-                                <option value="II">II</option>
-                                <option value="III">III</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label>Sex</label>
-                            <div class="radio-group">
-                                <div class="radio-option">
-                                    <input type="radio" id="male" name="sex" value="male" class="input-radio" disabled required>
-                                    <label for="male" class="radio-label">Male</label>
-                                </div>
-                                <div class="radio-option">
-                                    <input type="radio" id="female" name="sex" value="female" class="input-radio" disabled>
-                                    <label for="female" class="radio-label">Female</label>
+                <div class="collapsable-container">
+                    <div class="personal-info-container">
+                        <div class="input-row">
+                            <div>
+                                <label for="fName">First Name</label>
+                                <input type="text" id="fName" name="fName" placeholder="First Name" class="input-text"
+                                    required disabled>
+                            </div>
+                            <div>
+                                <label for="mName">Middle Name</label>
+                                <input type="text" id="mName" name="mName" placeholder="Middle Name" class="input-text"
+                                    required disabled>
+                            </div>
+                            <div>
+                                <label for="surname">Surname</label>
+                                <input type="text" id="surname" name="surname" placeholder="Surname" class="input-text"
+                                    required disabled>
+                            </div>
+                            <div>
+                                <label for="suffix">Suffix</label>
+                                <select id="suffix" name="suffix" class="input-text" disabled>
+                                    <option value="" disabled selected>Select suffix</option>
+                                    <option value="None">None</option>
+                                    <option value="Jr.">Jr.</option>
+                                    <option value="Sr.">Sr.</option>
+                                    <option value="II">II</option>
+                                    <option value="III">III</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label>Sex</label>
+                                <div class="radio-group">
+                                    <div class="radio-option">
+                                        <input type="radio" id="male" name="sex" value="male" class="input-radio"
+                                            disabled required>
+                                        <label for="male" class="radio-label">Male</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="female" name="sex" value="female" class="input-radio"
+                                            disabled>
+                                        <label for="female" class="radio-label">Female</label>
+                                    </div>
                                 </div>
                             </div>
+                            <div>
+                                <label for="DOB">Date of Birth</label>
+                                <input type="date" id="DOB" name="DOB" class="input-text" required disabled>
+                            </div>
+                            <!-- Continue with other fields in similar single-column format -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-header1">
+                    <h1>Address</h1>
+                    <svg class="arrow-header-icon1" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m17.16 7.59l-5.66 5.66l-5.66-5.66l.71-.7l4.95 4.95l4.95-4.95zm0 4l-5.66 5.66l-5.66-5.66l.71-.7l4.95 4.95l4.95-4.95z" />
+                    </svg>
+                </div>
+                <div class="collapsable-container1">
+                    <div class="input-row">
+                        <div>
+                            <label for="homeNo">Home Number</label><br>
+                            <input type="text" id="homeNo" name="homeNo" class="input-text" required disabled>
                         </div>
                         <div>
-                            <label for="DOB">Date of Birth</label>
-                            <input type="date" id="DOB" name="DOB" class="input-text" required disabled>
+                            <label for="street">Street</label><br>
+                            <input type="text" id="street" name="street" class="input-text" required disabled>
                         </div>
-                        <!-- Continue with other fields in similar single-column format -->
+                        <div>
+                            <label for="baranggay">Baranggay</label><br>
+                            <input type="text" id="baranggay" name="baranggay" class="input-text" required disabled>
+                        </div>
+                        <div>
+                            <label for="city">City</label><br>
+                            <input type="text" id="city" name="city" class="input-text" required disabled>
+                        </div>
+                        <div>
+                            <label for="province">Province</label><br>
+                            <input type="text" id="province" name="province" class="input-text" required disabled>
+                        </div>
+                        <div>
+                            <label for="region">Region</label><br>
+                            <input type="text" id="region" name="region" class="input-text" required disabled>
+                        </div>
                     </div>
                 </div>
 
-                <h1>Address</h1>
-                <div class="input-row">
-                    <div>
-                        <label for="homeNo">Home Number</label><br>
-                        <input type="text" id="homeNo" name="homeNo" class="input-text" required disabled>
-                    </div>
-                    <div>
-                        <label for="street">Street</label><br>
-                        <input type="text" id="street" name="street" class="input-text" required disabled>
-                    </div>
-                    <div>
-                        <label for="baranggay">Baranggay</label><br>
-                        <input type="text" id="baranggay" name="baranggay" class="input-text" required disabled>
-                    </div>
-                    <div>
-                        <label for="city">City</label><br>
-                        <input type="text" id="city" name="city" class="input-text" required disabled>
-                    </div>
-                    <div>
-                        <label for="province">Province</label><br>
-                        <input type="text" id="province" name="province" class="input-text" required disabled>
-                    </div>
-                    <div>
-                        <label for="region">Region</label><br>
-                        <input type="text" id="region" name="region" class="input-text" required disabled>
-                    </div>
+                <div class="form-header2">
+                    <h1>Identity</h1>
+                    <svg class="arrow-header-icon2" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m17.16 7.59l-5.66 5.66l-5.66-5.66l.71-.7l4.95 4.95l4.95-4.95zm0 4l-5.66 5.66l-5.66-5.66l.71-.7l4.95 4.95l4.95-4.95z" />
+                    </svg>
                 </div>
-
-                <h1>Identity</h1>
+                <div class="collapsable-container2">
                 <div class="input-row">
 
                     <div>
@@ -225,12 +258,19 @@ $db->close();
                         <label for="photo">Upload photo of ID</label><br>
                         <input type="file" accept="image/*" id="idPhoto" name="idPhoto" class="img-input" disabled>
                         <div id="idPhotoPreview"></div>
-
                     </div>
-
+                </div>
                 </div>
 
-                <h1>Employer Details</h1>
+                <div class="form-header3">
+                    <h1>Employers Details</h1>
+                    <svg class="arrow-header-icon3" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m17.16 7.59l-5.66 5.66l-5.66-5.66l.71-.7l4.95 4.95l4.95-4.95zm0 4l-5.66 5.66l-5.66-5.66l.71-.7l4.95 4.95l4.95-4.95z" />
+                    </svg>
+                </div>
+                <div class="collapsable-container3">
                 <div class="input-row">
                     <div>
                         <label for="employerName">Name of Employer</label><br>
@@ -256,8 +296,17 @@ $db->close();
                         <input type="number" id="salary" name="salary" class="input-text" disabled>
                     </div>
                 </div>
+                </div>
 
-                <h1>Employer Address</h1>
+                <div class="form-header4">
+                    <h1>Employer's Address</h1>
+                    <svg class="arrow-header-icon4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m17.16 7.59l-5.66 5.66l-5.66-5.66l.71-.7l4.95 4.95l4.95-4.95zm0 4l-5.66 5.66l-5.66-5.66l.71-.7l4.95 4.95l4.95-4.95z" />
+                    </svg>
+                </div>
+                <div class="collapsable-container4">
                 <div class="input-row">
                     <div>
                         <label for="homeNo">Home Number</label><br>
@@ -289,6 +338,7 @@ $db->close();
                             disabled>
                     </div>
                 </div>
+                </div>
                 <!-- 
                 <h1>Is Insured</h1>
                 <div class="input-row">
@@ -301,7 +351,15 @@ $db->close();
                     </div>
                 </div> -->
 
-                <h1>Insurance Details</h1>
+                <div class="form-header5">
+                    <h1>Insurance Details</h1>
+                    <svg class="arrow-header-icon5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m17.16 7.59l-5.66 5.66l-5.66-5.66l.71-.7l4.95 4.95l4.95-4.95zm0 4l-5.66 5.66l-5.66-5.66l.71-.7l4.95 4.95l4.95-4.95z" />
+                    </svg>
+                </div>
+                <div class="collapsable-container5">
                 <div class="input-row">
                     <div>
                         <label for="insuranceType">Insurance Provider</label><br>
@@ -319,11 +377,12 @@ $db->close();
                     </div>
                     <div>
                         <label for="expiryDateInsurance">Expiry Date</label><br>
-                        <input type="date" id="expiryDateInsurance" name="expiryDateInsurance" class="input-text" disabled>
+                        <input type="date" id="expiryDateInsurance" name="expiryDateInsurance" class="input-text"
+                            disabled>
                     </div>
                     <div>
                         <label for="dependentName">Name of Dependent</label><br>
-                     <input type="text" id="dependentName" name="dependentName" class="input-text" disabled>
+                        <input type="text" id="dependentName" name="dependentName" class="input-text" disabled>
                     </div>
                     <div>
                         <label for="dependentContactNo">Dependent Contact No.</label><br>
@@ -337,14 +396,24 @@ $db->close();
                         <div id="insurancePhotoPreview"></div>
                     </div>
                 </div>
+                </div>
 
-                <h1>Collateral</h1>
+                <div class="form-header6">
+                    <h1>Collateral</h1>
+                    <svg class="arrow-header-icon6" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m17.16 7.59l-5.66 5.66l-5.66-5.66l.71-.7l4.95 4.95l4.95-4.95zm0 4l-5.66 5.66l-5.66-5.66l.71-.7l4.95 4.95l4.95-4.95z" />
+                    </svg>
+                </div>
+                <div class="collapsable-container6">
                 <div class="input-row">
                     <div>
                         <label for="collateral">Upload Pictures of Collateral</label><br>
                         <input type="file" accept="image/*" class="img-input" id="collateral" multiple disabled>
                         <div id="collateral-preview"></div> <!-- Add this div for preview -->
                     </div>
+                </div>
                 </div>
                 <div class="button-container">
                     <input type="submit" value="Confirm" class="confirmBtn">
@@ -355,6 +424,7 @@ $db->close();
             </form>
         </div>
     </div>
+
 
     </div>
     <!-- Payment Modal -->
@@ -509,7 +579,7 @@ $db->close();
                 <button id="tblPaymentBtn">Payment</button>
                 <button id="tblLoanBtn">Loan</button>
                 <button id="tblGroceryBtn">Grocery Item</button>
-                <button id="generateSoaBtn"class="soa-btn" disabled>Statement of Account</button>
+                <button id="generateSoaBtn" class="soa-btn" disabled>Statement of Account</button>
             </div>
 
             <div class="table-button-add">
